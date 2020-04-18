@@ -29,6 +29,10 @@ nm -A -C templates_98_example01.exe  > dump.log
 ```
  And here's interesting fact, msvc compiler does not compile unused template and all. This means, if you make syntax error in template and you never use it, your program will compile just fine. On the other hand, gcc checks for error even in non-used templates.
 
+## Replacement of macro functions
+The two worst and most dangerous things in the Earth are macros **MIN** and **MAX**. According to **Effective C++**, you should definitely stay away from macro functions.  
+First problem with macro functions is that macro functions does not check types. This may lead to undefined behaviour.
+Second problem is that macros are not really functions. They are copy & paste tool for the compiler. This can be very powerful, but also very dangerous. 
 ## When should I use templates? 
 Well, this is complicated question. Templates are really powerful, but they can get really messy really quickly. There are some people who claims, you should never **ever** use templates. Well, in my personal opinion, you cannot be more wrong :) If you have for example some function that takes every possible data type, do you really want to write every possible overload? Really? Well, good luck with that, but I would automate it with templates.
 
