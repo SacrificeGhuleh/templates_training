@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.16)
+cmake_minimum_required(VERSION 3.10)
 project(templates_98)
 set(CMAKE_CXX_STANDARD 98)
 
@@ -10,3 +10,4 @@ add_subdirectory(${COMMON_LIB_PATH} "./common" EXCLUDE_FROM_ALL)
 
 add_executable(${PROJECT_NAME}_example01 ${SRC_DIR}/example01.cpp ${COMMON_SOURCES})
 add_executable(${PROJECT_NAME}_example02 ${SRC_DIR}/example02.cpp ${COMMON_SOURCES})
+add_executable(${PROJECT_NAME}_fibonacci ${SRC_DIR}/fibonacci.cpp ${COMMON_SOURCES})
